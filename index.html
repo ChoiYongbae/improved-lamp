@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8fafc" />
+  <meta name="description" content="인생 시스템 연구소는 삶의 복잡한 요소를 연결하고, 더 나은 일상을 위한 시스템을 설계합니다." />
+  <title>인생 시스템 연구소 | 더 나은 삶을 설계하는 시스템</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    /* 수정 영역: 브랜드 색상을 바꾸고 싶다면 아래 색상 값을 수정하세요. */
+    tailwind.config = {
+      theme: { extend: { colors: {
+        ink: '#10243a', brand: '#2563eb', mist: '#eef4fb', muted: '#64748b'
+      }, boxShadow: { soft: '0 24px 70px rgba(15, 35, 60, .10)' } } }
+    }
+  </script>
+  <style>
+    :root { color-scheme: light; }
+    body { font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; }
+    .grid-pattern { background-image: linear-gradient(rgba(37,99,235,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(37,99,235,.045) 1px,transparent 1px); background-size: 34px 34px; }
+    .orb { background: radial-gradient(circle,rgba(96,165,250,.30),rgba(219,234,254,.08) 66%,transparent 70%); }
+  </style>
+</head>
+<body class="bg-white text-ink antialiased">
+  <!-- 수정 영역: 로고 텍스트와 메뉴 이름, 각 섹션의 id를 함께 바꾸면 내비게이션이 연결됩니다. -->
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-200/70 bg-white/90 backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="주요 메뉴">
+      <a href="#home" class="flex items-center gap-3" aria-label="인생 시스템 연구소 홈">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-ink text-white shadow-lg shadow-slate-900/10">
+          <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" aria-hidden="true"><path d="M4 7.5h6v-4H4v4Zm10 13h6v-4h-6v4ZM4 20.5h6v-9H4v9Zm10-4h6v-13h-6v13Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M10 5.5h4m-4 9h4" stroke="currentColor" stroke-width="1.7"/></svg>
+        </span>
+        <span class="text-[15px] font-bold tracking-tight text-ink sm:text-base">인생 시스템 연구소</span>
+      </a>
+      <div class="hidden items-center gap-8 md:flex">
+        <a class="text-sm font-medium text-slate-600 transition hover:text-brand" href="#about">회사소개</a>
+        <a class="text-sm font-medium text-slate-600 transition hover:text-brand" href="#services">핵심 서비스</a>
+        <a class="text-sm font-medium text-slate-600 transition hover:text-brand" href="#values">비전 / 가치</a>
+        <a class="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand" href="#contact">문의하기 <span aria-hidden="true">↗</span></a>
+      </div>
+      <button id="menuButton" class="grid h-10 w-10 place-items-center rounded-lg border border-slate-200 text-ink md:hidden" aria-expanded="false" aria-controls="mobileMenu" aria-label="메뉴 열기">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </nav>
+    <div id="mobileMenu" class="hidden border-t border-slate-100 bg-white px-5 pb-5 md:hidden">
+      <div class="mx-auto grid max-w-7xl gap-1 pt-3">
+        <a class="rounded-lg px-3 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50" href="#about">회사소개</a>
+        <a class="rounded-lg px-3 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50" href="#services">핵심 서비스</a>
+        <a class="rounded-lg px-3 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50" href="#values">비전 / 가치</a>
+        <a class="rounded-lg bg-ink px-3 py-3 text-sm font-semibold text-white" href="#contact">문의하기 ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- 수정 영역: 메인 카피와 설명을 브랜드 메시지에 맞게 변경하세요. Unsplash 이미지 URL도 교체할 수 있습니다. -->
+    <section class="relative isolate overflow-hidden bg-slate-50 pt-28 lg:pt-32">
+      <div class="absolute inset-0 -z-10 grid-pattern"></div><div class="orb absolute -right-44 -top-32 -z-10 h-[620px] w-[620px]"></div>
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-20 pt-12 lg:grid-cols-[1.02fr_.98fr] lg:px-8 lg:pb-28 lg:pt-16">
+        <div class="relative z-10">
+          <div class="mb-7 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white/80 px-3.5 py-2 text-xs font-semibold tracking-wide text-blue-700 shadow-sm">
+            <span class="h-1.5 w-1.5 rounded-full bg-blue-500"></span> LIFE, DESIGNED WITH INTENTION
+          </div>
+          <h1 class="max-w-2xl text-[2.65rem] font-bold leading-[1.2] tracking-[-.055em] text-ink sm:text-5xl lg:text-[3.65rem]">삶의 모든 순간을<br /><span class="text-brand">최적화하는 시스템</span>을<br class="hidden sm:block" /> 연구합니다</h1>
+          <p class="mt-6 max-w-xl text-base leading-8 text-slate-600 sm:text-lg">복잡한 일상 속에서 더 중요한 것에 집중할 수 있도록.<br class="hidden sm:block" /> 사람과 시간, 환경을 연결하는 지속 가능한 삶의 구조를 설계합니다.</p>
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="#about" class="inline-flex items-center justify-center gap-2 rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-ink/15 transition hover:-translate-y-0.5 hover:bg-brand">연구소 알아보기 <span aria-hidden="true">↗</span></a>
+            <a href="#contact" class="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 bg-white/70 px-7 py-3.5 text-sm font-semibold text-ink transition hover:border-brand hover:text-brand">프로젝트 문의하기</a>
+          </div>
+          <div class="mt-12 flex items-center gap-4 border-t border-slate-200 pt-6">
+            <div class="flex -space-x-2" aria-hidden="true"><span class="h-9 w-9 rounded-full border-2 border-slate-50 bg-blue-200"></span><span class="h-9 w-9 rounded-full border-2 border-slate-50 bg-slate-300"></span><span class="h-9 w-9 rounded-full border-2 border-slate-50 bg-indigo-200"></span></div>
+            <p class="text-xs leading-5 text-slate-500"><strong class="font-semibold text-slate-700">더 나은 일상을 함께 설계합니다</strong><br />사람 중심의 시스템 연구와 실천</p>
+          </div>
+        </div>
+        <div class="relative mx-auto w-full max-w-xl lg:max-w-none">
+          <div class="absolute -inset-4 rounded-[2rem] bg-blue-100/60 blur-2xl"></div>
+          <div class="relative overflow-hidden rounded-[1.6rem] border border-white shadow-soft">
+            <!-- 이미지 수정 영역: 아래 Unsplash URL을 원하는 이미지 주소로 교체하세요. -->
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85" alt="차분한 분위기의 현대적인 협업 공간" class="h-[340px] w-full object-cover sm:h-[440px] lg:h-[500px]" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink/65 via-transparent to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white sm:p-8"><p class="text-xs font-semibold uppercase tracking-[.2em] text-blue-100">A SYSTEM FOR EVERYDAY LIFE</p><p class="mt-2 text-xl font-semibold tracking-tight sm:text-2xl">작은 변화가 만드는<br />지속 가능한 차이</p></div>
+            <div class="absolute right-5 top-5 rounded-2xl border border-white/60 bg-white/90 p-4 shadow-lg backdrop-blur sm:right-7 sm:top-7"><div class="flex items-center gap-3"><span class="grid h-10 w-10 place-items-center rounded-xl bg-blue-50 text-brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" class="h-5 w-5" aria-hidden="true"><path d="M4 18V6m0 12h16M7 15l4-4 3 2 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="block text-[10px] font-semibold uppercase tracking-wider text-slate-400">OUR APPROACH</span><span class="mt-0.5 block text-sm font-bold text-ink">관찰 · 설계 · 개선</span></span></div></div>
+          </div>
+          <div class="absolute -bottom-5 -left-3 hidden rounded-xl border border-slate-100 bg-white px-4 py-3 shadow-lg sm:block"><p class="text-xs text-slate-500">일상을 이루는 요소를</p><p class="mt-1 text-sm font-bold text-ink">하나의 흐름으로 연결합니다 <span class="text-brand">✳</span></p></div>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-1/2 hidden h-14 w-px bg-gradient-to-b from-blue-300 to-transparent lg:block"></div>
+    </section>
+
+    <!-- 수정 영역: 연구소 소개 문구와 숫자 지표를 실제 회사 정보에 맞게 수정하세요. -->
+    <section id="about" class="scroll-mt-24 py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:gap-24">
+          <div><p class="text-xs font-bold uppercase tracking-[.22em] text-brand">ABOUT THE LAB</p><h2 class="mt-4 text-3xl font-bold leading-tight tracking-tight text-ink sm:text-4xl">좋은 삶은 우연이 아니라<br class="hidden sm:block" /> 잘 설계된 구조에서 시작됩니다.</h2></div>
+          <div><p class="text-base leading-8 text-slate-600">인생 시스템 연구소는 개인과 조직이 마주한 복잡한 문제를 시스템의 관점으로 바라봅니다. 목표와 습관, 시간과 환경이 서로 어떤 영향을 주는지 살피고, 실제 삶에 오래 적용할 수 있는 구조를 함께 만듭니다.</p><p class="mt-4 text-base leading-8 text-slate-600">단편적인 팁을 넘어 문제의 맥락을 이해하고, 작게 실험하며, 배운 것을 다시 설계에 반영합니다. 더 명확한 선택과 지속 가능한 변화를 위한 아키텍처를 연구합니다.</p>
+            <div class="mt-9 grid grid-cols-3 gap-4 border-t border-slate-200 pt-6"><div><p class="text-2xl font-bold tracking-tight text-ink">01<span class="text-brand">.</span></p><p class="mt-1 text-xs text-slate-500 sm:text-sm">맥락을 관찰</p></div><div><p class="text-2xl font-bold tracking-tight text-ink">02<span class="text-brand">.</span></p><p class="mt-1 text-xs text-slate-500 sm:text-sm">구조를 설계</p></div><div><p class="text-2xl font-bold tracking-tight text-ink">03<span class="text-brand">.</span></p><p class="mt-1 text-xs text-slate-500 sm:text-sm">함께 개선</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 수정 영역: 카드의 제목, 설명, 아이콘을 실제 제공 서비스에 맞게 바꿔 사용하세요. -->
+    <section id="services" class="scroll-mt-24 bg-slate-50 py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><p class="text-xs font-bold uppercase tracking-[.22em] text-brand">WHAT WE DO</p><h2 class="mt-4 text-3xl font-bold tracking-tight text-ink sm:text-4xl">일상을 바꾸는 핵심 연구</h2></div><p class="max-w-md text-sm leading-7 text-slate-500">지금 필요한 변화의 크기와 상황에 맞춰<br class="hidden sm:block" /> 실용적인 접근 방법을 제안합니다.</p></div>
+        <div class="mt-11 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="group rounded-2xl border border-slate-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-soft"><div class="grid h-12 w-12 place-items-center rounded-xl bg-blue-50 text-brand transition group-hover:bg-brand group-hover:text-white"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><path d="M12 12h.01" stroke-width="3"/></svg></div><p class="mt-7 text-xs font-bold tracking-wider text-blue-600">01 / ARCHITECTURE</p><h3 class="mt-2 text-lg font-bold text-ink">라이프 시스템 설계</h3><p class="mt-3 text-sm leading-6 text-slate-500">삶의 우선순위와 목표를 연결해 나에게 맞는 생활 구조를 설계합니다.</p><span class="mt-6 block text-brand transition group-hover:translate-x-1" aria-hidden="true">↗</span></article>
+          <article class="group rounded-2xl border border-slate-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-soft"><div class="grid h-12 w-12 place-items-center rounded-xl bg-blue-50 text-brand transition group-hover:bg-brand group-hover:text-white"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.64 5.64l2.12 2.12m8.48 8.48 2.12 2.12m0-12.72-2.12 2.12m-8.48 8.48-2.12 2.12"/><circle cx="12" cy="12" r="5"/></svg></div><p class="mt-7 text-xs font-bold tracking-wider text-blue-600">02 / DAILY PRACTICE</p><h3 class="mt-2 text-lg font-bold text-ink">퍼스널 루틴 최적화</h3><p class="mt-3 text-sm leading-6 text-slate-500">무리 없이 반복할 수 있는 습관과 하루의 리듬을 함께 찾아갑니다.</p><span class="mt-6 block text-brand transition group-hover:translate-x-1" aria-hidden="true">↗</span></article>
+          <article class="group rounded-2xl border border-slate-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-soft"><div class="grid h-12 w-12 place-items-center rounded-xl bg-blue-50 text-brand transition group-hover:bg-brand group-hover:text-white"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1.5"/><rect x="14" y="14" width="6" height="6" rx="1.5"/><path d="M10 7h4a2 2 0 0 1 2 2v5M14 17h-4a2 2 0 0 1-2-2v-5" stroke-linecap="round"/></svg></div><p class="mt-7 text-xs font-bold tracking-wider text-blue-600">03 / WORKFLOW</p><h3 class="mt-2 text-lg font-bold text-ink">프로세스 자동화</h3><p class="mt-3 text-sm leading-6 text-slate-500">반복 업무의 흐름을 정리하고 더 가치 있는 일에 집중하도록 돕습니다.</p><span class="mt-6 block text-brand transition group-hover:translate-x-1" aria-hidden="true">↗</span></article>
+          <article class="group rounded-2xl border border-slate-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-soft"><div class="grid h-12 w-12 place-items-center rounded-xl bg-blue-50 text-brand transition group-hover:bg-brand group-hover:text-white"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 19V5m0 14h16M7 15l3-4 3 2 5-6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="7" r="1"/></svg></div><p class="mt-7 text-xs font-bold tracking-wider text-blue-600">04 / SYSTEMS THINKING</p><h3 class="mt-2 text-lg font-bold text-ink">시스템 사고 워크숍</h3><p class="mt-3 text-sm leading-6 text-slate-500">문제의 연결과 반복되는 패턴을 발견해 새로운 해결의 실마리를 찾습니다.</p><span class="mt-6 block text-brand transition group-hover:translate-x-1" aria-hidden="true">↗</span></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 수정 영역: 비전과 세 가지 핵심 가치는 조직의 실제 원칙에 맞춰 수정하세요. -->
+    <section id="values" class="scroll-mt-24 overflow-hidden py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="rounded-[2rem] bg-ink px-6 py-12 text-white sm:px-12 sm:py-16 lg:px-16"><div class="grid gap-12 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
+          <div><p class="text-xs font-bold uppercase tracking-[.22em] text-blue-300">OUR VISION & VALUES</p><h2 class="mt-5 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">더 나은 삶을 위한<br />좋은 시스템의 가능성</h2><p class="mt-5 max-w-md text-sm leading-7 text-slate-300">누구나 자신에게 맞는 방식으로 성장하고, 그 변화가 오래 이어질 수 있는 환경을 만듭니다.</p></div>
+          <div class="grid gap-6 sm:grid-cols-3 lg:gap-5">
+            <div class="border-t border-white/20 pt-5"><span class="grid h-10 w-10 place-items-center rounded-xl bg-white/10 text-blue-300"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s8-4 8-11V5l-8-3-8 3v5c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/></svg></span><h3 class="mt-4 font-bold">사람 중심</h3><p class="mt-2 text-sm leading-6 text-slate-300">시스템보다 사람의 맥락과 가능성을 먼저 봅니다.</p></div>
+            <div class="border-t border-white/20 pt-5"><span class="grid h-10 w-10 place-items-center rounded-xl bg-white/10 text-blue-300"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.34-5.66L4 8.5"/><path d="M4 4v4.5h4.5M12 8v4l3 2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-4 font-bold">지속 가능한 실천</h3><p class="mt-2 text-sm leading-6 text-slate-300">작지만 오래 이어지는 변화를 설계합니다.</p></div>
+            <div class="border-t border-white/20 pt-5"><span class="grid h-10 w-10 place-items-center rounded-xl bg-white/10 text-blue-300"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 12s3-6 9-6 9 6 9 6-3 6-9 6-9-6-9-6Z"/><circle cx="12" cy="12" r="2.5"/></svg></span><h3 class="mt-4 font-bold">열린 탐구</h3><p class="mt-2 text-sm leading-6 text-slate-300">관찰하고 실험하며 더 나은 답을 찾아갑니다.</p></div>
+          </div>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- 수정 영역: 연락처 정보와 문의 처리 방식을 실제 운영 정보에 맞춰 연결하세요. -->
+    <section id="contact" class="scroll-mt-24 bg-slate-50 py-20 sm:py-28">
+      <div class="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[.85fr_1.15fr] lg:gap-24 lg:px-8">
+        <div><p class="text-xs font-bold uppercase tracking-[.22em] text-brand">LET'S CONNECT</p><h2 class="mt-4 text-3xl font-bold tracking-tight text-ink sm:text-4xl">다음 변화를<br />함께 설계해볼까요?</h2><p class="mt-5 max-w-md text-sm leading-7 text-slate-600">개인과 조직의 일하는 방식, 새로운 협업에 대해 이야기 나눠요. 아래 양식을 남겨주시면 확인 후 연락드리겠습니다.</p>
+          <div class="mt-9 space-y-5"><div class="flex items-start gap-4"><span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-white text-brand shadow-sm"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><p class="text-xs text-slate-500">이메일</p><a href="mailto:hello@lifesystemlab.kr" class="mt-1 block text-sm font-semibold text-ink hover:text-brand">hello@lifesystemlab.kr</a></div></div><div class="flex items-start gap-4"><span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-white text-brand shadow-sm"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.2"/></svg></span><div><p class="text-xs text-slate-500">위치</p><p class="mt-1 text-sm font-semibold text-ink">서울, 대한민국</p></div></div></div>
+        </div>
+        <form id="contactForm" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-9">
+          <div class="grid gap-5 sm:grid-cols-2"><label class="block"><span class="text-sm font-semibold text-slate-700">이름 <span class="text-brand">*</span></span><input required name="name" autocomplete="name" type="text" placeholder="홍길동" class="mt-2 w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-ink outline-none transition placeholder:text-slate-400 focus:border-brand focus:bg-white focus:ring-4 focus:ring-blue-100" /></label><label class="block"><span class="text-sm font-semibold text-slate-700">이메일 <span class="text-brand">*</span></span><input required name="email" autocomplete="email" type="email" placeholder="you@example.com" class="mt-2 w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-ink outline-none transition placeholder:text-slate-400 focus:border-brand focus:bg-white focus:ring-4 focus:ring-blue-100" /></label></div>
+          <label class="mt-5 block"><span class="text-sm font-semibold text-slate-700">문의 내용 <span class="text-brand">*</span></span><textarea required name="message" rows="5" placeholder="함께 나누고 싶은 내용을 적어주세요." class="mt-2 w-full resize-y rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-ink outline-none transition placeholder:text-slate-400 focus:border-brand focus:bg-white focus:ring-4 focus:ring-blue-100"></textarea></label>
+          <button type="submit" class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-blue-700 sm:w-auto">문의 보내기 <span aria-hidden="true">↗</span></button>
+          <p id="formMessage" class="mt-4 hidden text-sm text-blue-700" role="status" aria-live="polite"></p>
+          <p class="mt-4 text-xs leading-5 text-slate-400">양식은 현재 예시 동작만 포함합니다. 실제 접수에는 이메일 또는 폼 처리 서비스 연결이 필요합니다.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- 수정 영역: 하단의 사업자 정보, 연락처, SNS 주소와 카피라이트를 운영 정보로 교체하세요. -->
+  <footer class="bg-white">
+    <div class="mx-auto flex max-w-7xl flex-col gap-8 px-5 py-10 sm:flex-row sm:items-end sm:justify-between lg:px-8">
+      <div><a href="#home" class="flex items-center gap-3"><span class="grid h-9 w-9 place-items-center rounded-lg bg-ink text-white"><svg viewBox="0 0 24 24" fill="none" class="h-5 w-5" aria-hidden="true"><path d="M4 7.5h6v-4H4v4Zm10 13h6v-4h-6v4ZM4 20.5h6v-9H4v9Zm10-4h6v-13h-6v13Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><span class="font-bold text-ink">인생 시스템 연구소</span></a><p class="mt-3 text-xs leading-6 text-slate-500">더 나은 일상을 위한 시스템을 연구하고 설계합니다.<br />© <span id="year"></span> Life System Lab. All rights reserved.</p></div>
+      <div class="flex flex-col gap-4 sm:items-end"><div class="flex gap-5 text-xs font-medium text-slate-500"><a class="transition hover:text-brand" href="mailto:hello@lifesystemlab.kr">이메일</a><a class="transition hover:text-brand" href="#contact">문의하기</a><a class="transition hover:text-brand" href="#">Instagram ↗</a><a class="transition hover:text-brand" href="#">LinkedIn ↗</a></div><p class="text-xs text-slate-400">Seoul, Republic of Korea</p></div>
+    </div>
+  </footer>
+
+  <!-- 수정 영역: 메뉴 열기와 폼 제출 동작을 담당합니다. 실제 문의 접수는 백엔드/폼 서비스와 연결하세요. -->
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuButton.addEventListener('click', () => {
+      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? '메뉴 열기' : '메뉴 닫기');
+      mobileMenu.classList.toggle('hidden', isOpen);
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', '메뉴 열기');
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('contactForm').addEventListener('submit', event => {
+      event.preventDefault();
+      const message = document.getElementById('formMessage');
+      message.textContent = '문의 양식이 작성되었습니다. 실제 접수를 위해서는 이메일 또는 폼 서비스 연결이 필요합니다.';
+      message.classList.remove('hidden');
+      event.currentTarget.reset();
+    });
+  </script>
+</body>
+</html>
